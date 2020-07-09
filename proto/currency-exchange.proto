@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "gRpc/gen";
+
+message Request  {
+    string fromCurrency = 1;
+    string toCurrency = 2;
+}
+
+message Response {
+    float conversionMultiple = 1;
+}
+
+service CurrencyExchangeService {
+    rpc getExchangeRate (Request) returns (Response);
+}
