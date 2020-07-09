@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-option go_package = "gRpc/gen";
+option go_package = "gRPC/gen";
 
 message Request  {
     string fromCurrency = 1;
